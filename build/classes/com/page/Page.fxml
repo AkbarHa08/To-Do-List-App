@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1061.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.page.PageController">
+   <children>
+      <Accordion layoutX="14.0" layoutY="14.0" prefHeight="382.0" prefWidth="312.0">
+         <panes>
+            <TitledPane animated="false" text="NEW &amp; UPDATE" textFill="#2a00ff">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="345.0" prefWidth="310.0">
+                     <children>
+                        <Label layoutX="42.0" layoutY="7.0" prefHeight="24.0" prefWidth="49.0" text="TASK:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="46.0" layoutY="46.0" prefHeight="24.0" prefWidth="40.0" text="DAY:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="taskTF" layoutX="88.0" layoutY="5.0" prefHeight="12.0" prefWidth="153.0" promptText="ENTER TASK..." />
+                        <TextField fx:id="dayTF" layoutX="88.0" layoutY="44.0" prefHeight="12.0" prefWidth="153.0" promptText="ENTER DAY..." />
+                        <Label layoutX="98.0" layoutY="79.0" prefHeight="24.0" prefWidth="86.0" text="CATEGORY:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="categoryComboBox" layoutX="14.0" layoutY="113.0" prefHeight="37.0" prefWidth="203.0" />
+                        <Button fx:id="addCategoryBtn" layoutX="232.0" layoutY="110.0" mnemonicParsing="false" onAction="#addCategoryBtnOnAction" prefHeight="43.0" prefWidth="64.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="ADD" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="saveBtn" layoutX="23.0" layoutY="239.0" mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="SAVE" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateBtn" layoutX="184.0" layoutY="239.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="UPDATE" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <DatePicker fx:id="datePicker" layoutX="14.0" layoutY="183.0" prefHeight="37.0" prefWidth="275.0" promptText="Tarix qeyd edin..." />
+                        <Label layoutX="119.0" layoutY="153.0" prefHeight="24.0" prefWidth="44.0" text="DATE:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="404.0" prefWidth="312.0" text="SEARCH &amp; FILTER" textFill="#2a00ff">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="198.0" prefWidth="310.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="SEARCH:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchTF" layoutX="89.0" layoutY="12.0" onKeyReleased="#searchTFOnKeyReleased" prefHeight="27.0" prefWidth="202.0" promptText="ENTER SEARCH KEYWORD..." />
+                        <Label layoutX="110.0" layoutY="50.0" prefHeight="31.0" prefWidth="90.0" text="DAY FILTER:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="88.0" prefHeight="31.0" prefWidth="41.0" text="Min:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="121.0" prefHeight="31.0" prefWidth="41.0" text="Max:" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="minimalDayTF" layoutX="68.0" layoutY="90.0" prefHeight="27.0" prefWidth="223.0" promptText="ENTER MINIMAL DAY..." />
+                        <TextField fx:id="maximalDayTF" layoutX="68.0" layoutY="125.0" prefHeight="27.0" prefWidth="223.0" promptText="ENTER MAXIMAL DAY..." />
+                        <Button fx:id="dayFilterBtn" layoutX="107.0" layoutY="162.0" mnemonicParsing="false" onAction="#dayFilterBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="FILTER" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="clearAllFilterBtn" layoutX="73.0" layoutY="214.0" mnemonicParsing="false" onAction="#clearAllFilterBtnOnAction" prefHeight="43.0" prefWidth="165.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="CLEAR ALL FILTER" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="414.0" prefWidth="352.0" text="MORE" textFill="#2a00ff">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="solveBtn" layoutX="89.0" layoutY="36.0" mnemonicParsing="false" onAction="#solveBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: YELLOW; -fx-border-width: 3px;" text="SOLVE" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="filterByStatusBtn" layoutX="185.0" layoutY="125.0" mnemonicParsing="false" onAction="#filterByStatusBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="FILTER" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteBtn" layoutX="89.0" layoutY="215.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: green; -fx-border-width: 3px;" text="DELETE" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <CheckBox fx:id="solvedCheckBox" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" text="SOLVED" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="notSolvedCheckBox" layoutX="14.0" layoutY="125.0" mnemonicParsing="false" text="NOT SOLVED" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="allCheckBox" layoutX="14.0" layoutY="158.0" mnemonicParsing="false" text="ALL" textFill="#2a00ff">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Button fx:id="showBtn" layoutX="364.0" layoutY="14.0" mnemonicParsing="false" onAction="#showBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="SHOW" textFill="#2a00ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="hideBtn" layoutX="501.0" layoutY="14.0" mnemonicParsing="false" onAction="#hideBtnOnAction" prefHeight="43.0" prefWidth="96.0" style="-fx-background-color: white; -fx-border-color: red; -fx-border-width: 3px;" text="HIDE" textFill="#2a00ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="welcomeLbl" layoutX="612.0" layoutY="17.0" prefHeight="37.0" prefWidth="275.0" style="-fx-background-color: white;" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOutBtn" layoutX="903.0" layoutY="17.0" mnemonicParsing="false" onAction="#logOutBtnOnAction" prefHeight="43.0" prefWidth="123.0" style="-fx-background-color: WHITE; -fx-border-color: #2a00ff; -fx-border-width: 3px; -fx-border-radius: 10px;" text="LOG OUT" textFill="RED">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="364.0" layoutY="92.0" onMousePressed="#tableViewOnMousePressed" prefHeight="477.0" prefWidth="677.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="55.0" text="ID" />
+            <TableColumn fx:id="taskColumn" prefWidth="133.0" text="TASK" />
+            <TableColumn fx:id="dayColumn" minWidth="0.0" prefWidth="74.0" text="DAY" />
+            <TableColumn fx:id="dateColumn" prefWidth="146.0" text="DATE" />
+            <TableColumn fx:id="categoryColumn" prefWidth="157.0" text="CATEGORY" />
+            <TableColumn fx:id="statusColumn" prefWidth="113.0" text="STATUS" />
+         </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="623.0" prefHeight="31.0" prefWidth="112.0" style="-fx-background-color: white;" text="XEBERDARLIQ:" textFill="RED">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="warningLbl" layoutX="137.0" layoutY="623.0" prefHeight="31.0" prefWidth="888.0" style="-fx-background-color: white;" textFill="RED">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

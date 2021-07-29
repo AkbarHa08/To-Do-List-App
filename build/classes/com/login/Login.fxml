@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="307.0" prefWidth="668.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.login.LoginController">
+   <children>
+      <ImageView fitHeight="313.0" fitWidth="328.0" layoutX="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="415.0" layoutY="14.0" text="LOG IN" textFill="#f7e107">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameTF" layoutX="334.0" layoutY="74.0" onKeyReleased="#usernameTFonKeyReleased" prefHeight="36.0" prefWidth="253.0" promptText="Enter username...">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </TextField>
+      <Label fx:id="loginWarningLbl" layoutX="334.0" layoutY="191.0" prefHeight="28.0" prefWidth="313.0" textFill="#f50707">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginBtn" layoutX="323.0" layoutY="242.0" mnemonicParsing="false" onAction="#loginBtnOnAction" prefHeight="48.0" prefWidth="119.0" style="-fx-background-color: gray; -fx-border-color: white; -fx-border-width: 3px; -fx-border-radius: 10px;" text="LOG IN" textFill="#ffaa00">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="CreateAccountBtn" layoutX="462.0" layoutY="242.0" mnemonicParsing="false" onAction="#CreateAccountBtnOnAction" prefHeight="48.0" prefWidth="199.0" style="-fx-background-color: gray; -fx-border-color: white; -fx-border-width: 3px; -fx-border-radius: 10px;" text="CREATE ACCOUNT" textFill="#ffaa00">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="warningUsernameLbl" layoutX="604.0" layoutY="85.0" prefHeight="17.0" prefWidth="17.0" style="-fx-background-color: RED;" textFill="#f50505" />
+      <Label fx:id="warningPasswordLbl" layoutX="604.0" layoutY="148.0" prefHeight="17.0" prefWidth="17.0" style="-fx-background-color: RED;" textFill="#f50505" />
+      <PasswordField fx:id="passwordTF" layoutX="334.0" layoutY="138.0" onKeyReleased="#passwordTFonKeyReleased" prefHeight="38.0" prefWidth="253.0" promptText="Enter password...">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

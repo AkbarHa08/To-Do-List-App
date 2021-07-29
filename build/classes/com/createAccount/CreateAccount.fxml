@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="554.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.createAccount.CreateAccountController">
+   <children>
+      <Label layoutX="206.0" layoutY="14.0" prefHeight="31.0" prefWidth="143.0" text="CREATE ACCOUNT" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="45.0" prefHeight="31.0" prefWidth="57.0" text="NAME:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="84.0" prefHeight="31.0" prefWidth="88.0" text="SURNAME:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="124.0" prefHeight="31.0" prefWidth="94.0" text="USERNAME:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="96.0" layoutY="161.0" prefHeight="31.0" prefWidth="94.0" text="PASSWORD:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="200.0" prefHeight="31.0" prefWidth="177.0" text="CONFIRM PASSWORD:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="129.0" layoutY="241.0" prefHeight="31.0" prefWidth="63.0" text="E-MAIL:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="107.0" layoutY="283.0" prefHeight="31.0" prefWidth="78.0" text="ADDRESS:" textFill="#4d05ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="createAccountWarningLbl" layoutX="28.0" layoutY="338.0" prefHeight="31.0" prefWidth="498.0" textFill="#ff0505">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="SaveBtn" layoutX="44.0" layoutY="386.0" mnemonicParsing="false" onAction="#SaveBtnOnAction2" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: lightgray; -fx-border-color: blue; -fx-border-width: 3px; -fx-border-radius: 10px;" text="SAVE" textFill="#f80000">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="CancelBtn" layoutX="349.0" layoutY="386.0" mnemonicParsing="false" onAction="#CancelBtnOnAction" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: lightgray; -fx-border-color: blue; -fx-border-width: 3px; -fx-border-radius: 10px;" text="CANCEL" textFill="#f80000">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="nameTF" layoutX="196.0" layoutY="48.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Name..." />
+      <TextField fx:id="surnameTF" layoutX="196.0" layoutY="87.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Surname..." />
+      <TextField fx:id="usernameTF" layoutX="196.0" layoutY="127.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Nickname..." />
+      <TextField fx:id="emailTF" layoutX="196.0" layoutY="244.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter E-Mail..." />
+      <TextField fx:id="addressTF" layoutX="196.0" layoutY="286.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Address..." />
+      <PasswordField fx:id="passwordTF" layoutX="196.0" layoutY="164.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter Password..." />
+      <PasswordField fx:id="confirmPasswordTF" layoutX="196.0" layoutY="203.0" prefHeight="25.0" prefWidth="197.0" promptText="Confirm Password..." />
+   </children>
+</AnchorPane>
